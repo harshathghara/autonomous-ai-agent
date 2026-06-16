@@ -1,0 +1,44 @@
+# --- Secrets & credentials (never commit) ---
+.env
+.env.*
+!.env.example
+client_secret*.json
+client_secrets.json
+credentials.json
+*.pem
+*.key
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# --- Test / lint / coverage ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# --- Playwright (scraping tests / local runs) ---
+.playwright/
+playwright-report/
+test-results/
+
+# --- Logs ---
+*.log
+
+# --- IDE & OS ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
