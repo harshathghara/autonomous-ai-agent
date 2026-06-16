@@ -55,11 +55,11 @@ flowchart TB
     UI[HTML/CSS/JS Chat UI]
   end
 
-  subgraph api [FastAPI :8000]
-    REST[REST /api/tasks]
-    WS[WebSocket stream]
-    OAuth[OAuth /auth/google]
-    Health[/api/health]
+  subgraph api ["FastAPI :8000"]
+    REST["REST /api/tasks"]
+    WS["WebSocket stream"]
+    OAuth["OAuth /auth/google"]
+    Health["GET /api/health"]
   end
 
   subgraph agent [Agent core]
