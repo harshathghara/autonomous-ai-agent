@@ -15,7 +15,8 @@ load_dotenv()
 config = context.config
 database_url = build_sync_database_url()
 
-if config.config_file_name is not None:
+# Skip when called from FastAPI startup — fileConfig() would hide Uvicorn's URL log.
+if config.config_file_name is not None and not os.environ.get("_ALEMBIC_EMBEDDED"):
     fileConfig(config.config_file_name)
 
 target_metadata = Base.metadata
